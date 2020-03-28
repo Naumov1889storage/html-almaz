@@ -1,8 +1,15 @@
 (function () {
+    document.querySelectorAll(".vacancy__btn").forEach(item => {
+        item.addEventListener("click", e => {
+            let vacancy_name = item.closest(".vacancy").querySelector(".vacancy__title").innerHTML.toLowerCase();
 
+            document.querySelector(".vacancy-form-placeholder-text").innerHTML = vacancy_name;
+            document.querySelector(".vacancy-form-placeholder-input").value = vacancy_name;
+        })
+    })
 }());
 (function () {
-    document.querySelectorAll("form button[type=submit]").forEach(btn => {
+    document.querySelectorAll(".js-callback-btn").forEach(btn => {
         btn.addEventListener("click", function (e) {
             e.preventDefault();
 
@@ -18,16 +25,23 @@
             let phoneValue = phoneInput.value;
             let isPhoneValid = validatePhone(phoneValue);
 
+            let vacancyValue = form.querySelector("input[name=vacancy]");
+            if (!(vacancyValue)) {
+                vacancyValue = "-"
+            }
+
+
             if (!isNameValid) inputErrorAnimation(nameInput);
             if (!isPhoneValid) inputErrorAnimation(phoneInput);
             if (!isCheckboxValid) inputErrorAnimation(checkbox_object);
 
-            let isFormValid = isNameValid && isPhoneValid;
+            let isFormValid = isNameValid && isPhoneValid && isCheckboxValid;
 
             if (isFormValid) {
-                postAjax('email.php', {
+                postAjax('', {
                     name: nameValue,
                     phone: phoneValue,
+                    vacancy: vacancyValue,
                 }, function (data) {
                     // console.log("success", data);
                 });
@@ -156,6 +170,43 @@
         });
     }
 }());
+(function () {
+    if (Boolean(document.querySelector('input[name=phone]'))) {
+        document.querySelectorAll("input[name=phone]").forEach(input => {
+            input.addEventListener("input", mask, false);
+            input.addEventListener("focus", mask, false);
+            input.addEventListener("blur", mask, false);
+        });
+    }
+
+    function setCursorPosition(pos, elem) {
+        elem.focus();
+        if (elem.setSelectionRange) elem.setSelectionRange(pos, pos);
+        else if (elem.createTextRange) {
+            let range = elem.createTextRange();
+            range.collapse(true);
+            range.moveEnd("character", pos);
+            range.moveStart("character", pos);
+            range.select();
+        }
+    }
+
+    function mask(event) {
+        let matrix = "_ ___ ___ __ __",
+            i = 0,
+            def = matrix.replace(/\D/g, ""),
+            val = this.value.replace(/\D/g, "");
+        if (def.length >= val.length) val = def;
+        this.value = matrix.replace(/./g, function (a) {
+            return /[_\d]/.test(a) && i < val.length
+                ? val.charAt(i++)
+                : i >= val.length ? "" : a;
+        });
+        if (event.type === "blur") {
+            if (this.value.length === 2) this.value = "";
+        } else setCursorPosition(this.value.length, this);
+    }
+})();
 (function () {
     document.querySelector(".burger").addEventListener("click", function () {
         document.querySelector(".overlay").classList.add("overlay_active");

@@ -94,7 +94,29 @@ html(lang="ru-Ru")
                         .input-container
                             i.icon.icon_phone.input-container__icon
                             input(class="input input-container__input" required name="phone" placeholder="Ваш телефон")
-                        button(type="submit" class="btn btn_1 faq-section__btn") заказать звонок
+                        button(class="btn btn_1 js-callback-btn") заказать звонок
+                        label(class="checkbox")
+                            span.checkbox__text Даю согласие на обработку  моих <a class="text_color_primary" href="confidentiality.html">персональных данных</a>
+                            input(class="checkbox__input" checked type="checkbox")
+                            span.checkbox__checkmark
+
+        .popbox(data-popbox-id="popbox-vacancy")
+            .popbox_container.popbox_container_narrow.box
+                i.icon.popbox__cross(data-popbox-close="popbox-vacancy" style="width:16px;height:16px;background-image: url(img/icon-cross.svg)")
+                .box__content
+                    h3.title.title_h3
+                        span.title__text Откликнуться на вакансию <span class="vacancy-form-placeholder-text"></span>
+                        span.title__divider.title__divider_small
+                    .subtitle Оставьте свои контакты, наш менеджер свяжется с вами в течении 15 минут
+                    form(method="post")
+                        input(class="vacancy-form-placeholder-input" name="vacancy" type="hidden")
+                        .input-container
+                            i.icon.icon_user.input-container__icon
+                            input(class="input input-container__input" required name="name" placeholder="Ваше имя")
+                        .input-container
+                            i.icon.icon_phone.input-container__icon
+                            input(class="input input-container__input" required name="phone" placeholder="Ваш телефон")
+                        button(class="btn btn_1 js-callback-btn") Откликнуться
                         label(class="checkbox")
                             span.checkbox__text Даю согласие на обработку  моих <a class="text_color_primary" href="confidentiality.html">персональных данных</a>
                             input(class="checkbox__input" checked type="checkbox")

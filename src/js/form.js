@@ -1,5 +1,5 @@
 (function () {
-    document.querySelectorAll("form button[type=submit]").forEach(btn => {
+    document.querySelectorAll(".js-callback-btn").forEach(btn => {
         btn.addEventListener("click", function (e) {
             e.preventDefault();
 
@@ -15,16 +15,23 @@
             let phoneValue = phoneInput.value;
             let isPhoneValid = validatePhone(phoneValue);
 
+            let vacancyValue = form.querySelector("input[name=vacancy]");
+            if (!(vacancyValue)) {
+                vacancyValue = "-"
+            }
+
+
             if (!isNameValid) inputErrorAnimation(nameInput);
             if (!isPhoneValid) inputErrorAnimation(phoneInput);
             if (!isCheckboxValid) inputErrorAnimation(checkbox_object);
 
-            let isFormValid = isNameValid && isPhoneValid;
+            let isFormValid = isNameValid && isPhoneValid && isCheckboxValid;
 
             if (isFormValid) {
-                postAjax('email.php', {
+                postAjax('', {
                     name: nameValue,
                     phone: phoneValue,
+                    vacancy: vacancyValue,
                 }, function (data) {
                     // console.log("success", data);
                 });

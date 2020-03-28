@@ -2047,6 +2047,10 @@ table td.price {
     font-size: 26px;
   }
 
+  .title_h3 {
+    font-size: 23px;
+  }
+
   .title_30 {
     font-size: 25px;
     line-height: 35px;
@@ -2110,6 +2114,14 @@ table td.price {
 }
 
 @media (max-width: 600px) {
+  .vacancy {
+    margin: 0 0 50px 0;
+  }
+
+  .vacancy:last-child {
+    margin: 0 0 60px 0;
+  }
+
   .vacancy__btn {
     padding: 0 20px 0 20px;
   }

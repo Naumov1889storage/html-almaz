@@ -50,11 +50,11 @@
                 <br>1. Опыт работы, владение 1С, навыки работы в excel, word, internet.
                 <br>2. Коммуникабельность, активность, целеустремленность.
               </div>
-              <div class="vacancy__btn btn btn_1">откликнуться на вакансию</div>
+              <div class="vacancy__btn btn btn_1" data-popbox-target="popbox-vacancy">откликнуться на вакансию</div>
             </div>
             <div class="vacancy">
               <div class="vacancy__title-n-date">
-                <div class="vacancy__title">Менеджер по продажам</div>
+                <div class="vacancy__title">Менеджер по закупкам</div>
                 <div class="vacancy__date">28.02.2020</div>
               </div>
               <div class="vacancy__text">
@@ -71,11 +71,11 @@
                 <br>1. Опыт работы, владение 1С, навыки работы в excel, word, internet.
                 <br>2. Коммуникабельность, активность, целеустремленность.
               </div>
-              <div class="vacancy__btn btn btn_1">откликнуться на вакансию</div>
+              <div class="vacancy__btn btn btn_1" data-popbox-target="popbox-vacancy">откликнуться на вакансию</div>
             </div>
             <div class="vacancy">
               <div class="vacancy__title-n-date">
-                <div class="vacancy__title">Менеджер по продажам</div>
+                <div class="vacancy__title">Диспетчер</div>
                 <div class="vacancy__date">28.02.2020</div>
               </div>
               <div class="vacancy__text">
@@ -92,7 +92,7 @@
                 <br>1. Опыт работы, владение 1С, навыки работы в excel, word, internet.
                 <br>2. Коммуникабельность, активность, целеустремленность.
               </div>
-              <div class="vacancy__btn btn btn_1">откликнуться на вакансию</div>
+              <div class="vacancy__btn btn btn_1" data-popbox-target="popbox-vacancy">откликнуться на вакансию</div>
             </div>
           </div>
         </div>
@@ -117,7 +117,28 @@
             <div class="input-container"><i class="icon icon_phone input-container__icon"></i>
               <input class="input input-container__input" required name="phone" placeholder="Ваш телефон">
             </div>
-            <button class="btn btn_1 faq-section__btn" type="submit">заказать звонок</button>
+            <button class="btn btn_1 js-callback-btn">заказать звонок</button>
+            <label class="checkbox"><span class="checkbox__text">Даю согласие на обработку  моих <a class="text_color_primary" href="confidentiality.html">персональных данных</a></span>
+              <input class="checkbox__input" checked type="checkbox"><span class="checkbox__checkmark"></span>
+            </label>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="popbox" data-popbox-id="popbox-vacancy">
+      <div class="popbox_container popbox_container_narrow box"><i class="icon popbox__cross" data-popbox-close="popbox-vacancy" style="width:16px;height:16px;background-image: url(img/icon-cross.svg)"></i>
+        <div class="box__content">
+          <h3 class="title title_h3"><span class="title__text">Откликнуться на вакансию <span class="vacancy-form-placeholder-text"></span></span><span class="title__divider title__divider_small"></span></h3>
+          <div class="subtitle">Оставьте свои контакты, наш менеджер свяжется с вами в течении 15 минут</div>
+          <form method="post">
+            <input class="vacancy-form-placeholder-input" name="vacancy" type="hidden">
+            <div class="input-container"><i class="icon icon_user input-container__icon"></i>
+              <input class="input input-container__input" required name="name" placeholder="Ваше имя">
+            </div>
+            <div class="input-container"><i class="icon icon_phone input-container__icon"></i>
+              <input class="input input-container__input" required name="phone" placeholder="Ваш телефон">
+            </div>
+            <button class="btn btn_1 js-callback-btn">Откликнуться</button>
             <label class="checkbox"><span class="checkbox__text">Даю согласие на обработку  моих <a class="text_color_primary" href="confidentiality.html">персональных данных</a></span>
               <input class="checkbox__input" checked type="checkbox"><span class="checkbox__checkmark"></span>
             </label>

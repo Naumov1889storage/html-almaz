@@ -31,6 +31,12 @@
   padding: 0 42px 0 42px;
 }
 @media (max-width: 600px) {
+  .vacancy {
+    margin: 0 0 50px 0;
+  }
+  .vacancy:last-child {
+    margin: 0 0 60px 0;
+  }
   .vacancy__btn {
     padding: 0 20px 0 20px;
   }
