@@ -1,0 +1,235 @@
+.input-container {
+  height: 75px;
+}
+.input {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  padding: 0 32px 0 22px;
+  border: 1px solid #d4d4d4;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.input::placeholder {
+/* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: $greyColor;
+  opacity: 1; /* Firefox */
+}
+.input:-ms-input-placeholder {
+/* Internet Explorer 10-11 */
+  color: $greyColor;
+}
+.input::-ms-input-placeholder {
+/* Microsoft Edge */
+  color: $greyColor;
+}
+.input:focus {
+  box-shadow: inset 0 0 12px rgba(24,24,24,0.15);
+}
+@media (max-width: 400px) {
+  .input {
+    padding: 0 32px 0 22px;
+    font-size: 17px;
+  }
+}
+.input-container {
+  position: relative;
+  display: inline-block;
+}
+.input-container__icon {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 25px;
+}
+.input-container__input {
+  padding-right: 62px;
+}
+.checkbox {
+  padding-left: 28px;
+  color: #5e5e5e;
+  font-size: 14px;
+  font-weight: 400;
+}
+.checkbox__checkmark {
+  width: 18px;
+  height: 18px;
+  border-radius: 3px;
+  background: #e8e8e8;
+}
+.checkbox__checkmark:after {
+  display: block;
+  top: 4px;
+  left: 8px;
+  width: 3px;
+  height: 7px;
+  border-width: 0 1px 1px 0;
+  transform: rotate(45deg) scale(0.7);
+  opacity: 0;
+  transition: ease-in-out 0.1s;
+}
+.checkbox__input:checked ~ .checkbox__checkmark {
+  background-color: #49a62a;
+}
+.checkbox .checkbox__input:checked ~ .checkbox__checkmark {
+  background-color: #49a62a;
+}
+.checkbox .checkbox__input:checked ~ .checkbox__checkmark:after {
+  transform: rotate(45deg) scale(1);
+  opacity: 1;
+}
+.checkbox.bounce {
+  box-shadow: none;
+  color: #ff4d4d;
+}
+.checkbox.bounce a {
+  color: #ff4d4d;
+}
+.bounce.checkbox .checkbox__checkmark {
+  background-color: #ff4d4d;
+}
+.bounce {
+  outline: 0;
+  box-shadow: inset 0 0 12px #ffb3b3;
+  animation-name: bounce;
+  animation-duration: 0.5s;
+  animation-delay: 0.25s;
+}
+@-moz-keyframes bounce {
+  0% {
+    transform: translateX(0px);
+    timing-function: ease-in;
+  }
+  37% {
+    transform: translateX(5px);
+    timing-function: ease-out;
+  }
+  55% {
+    transform: translateX(-5px);
+    timing-function: ease-in;
+  }
+  73% {
+    transform: translateX(4px);
+    timing-function: ease-out;
+  }
+  82% {
+    transform: translateX(-4px);
+    timing-function: ease-in;
+  }
+  91% {
+    transform: translateX(2px);
+    timing-function: ease-out;
+  }
+  96% {
+    transform: translateX(-2px);
+    timing-function: ease-in;
+  }
+  100% {
+    transform: translateX(0px);
+    timing-function: ease-in;
+  }
+}
+@-webkit-keyframes bounce {
+  0% {
+    transform: translateX(0px);
+    timing-function: ease-in;
+  }
+  37% {
+    transform: translateX(5px);
+    timing-function: ease-out;
+  }
+  55% {
+    transform: translateX(-5px);
+    timing-function: ease-in;
+  }
+  73% {
+    transform: translateX(4px);
+    timing-function: ease-out;
+  }
+  82% {
+    transform: translateX(-4px);
+    timing-function: ease-in;
+  }
+  91% {
+    transform: translateX(2px);
+    timing-function: ease-out;
+  }
+  96% {
+    transform: translateX(-2px);
+    timing-function: ease-in;
+  }
+  100% {
+    transform: translateX(0px);
+    timing-function: ease-in;
+  }
+}
+@-o-keyframes bounce {
+  0% {
+    transform: translateX(0px);
+    timing-function: ease-in;
+  }
+  37% {
+    transform: translateX(5px);
+    timing-function: ease-out;
+  }
+  55% {
+    transform: translateX(-5px);
+    timing-function: ease-in;
+  }
+  73% {
+    transform: translateX(4px);
+    timing-function: ease-out;
+  }
+  82% {
+    transform: translateX(-4px);
+    timing-function: ease-in;
+  }
+  91% {
+    transform: translateX(2px);
+    timing-function: ease-out;
+  }
+  96% {
+    transform: translateX(-2px);
+    timing-function: ease-in;
+  }
+  100% {
+    transform: translateX(0px);
+    timing-function: ease-in;
+  }
+}
+@keyframes bounce {
+  0% {
+    transform: translateX(0px);
+    timing-function: ease-in;
+  }
+  37% {
+    transform: translateX(5px);
+    timing-function: ease-out;
+  }
+  55% {
+    transform: translateX(-5px);
+    timing-function: ease-in;
+  }
+  73% {
+    transform: translateX(4px);
+    timing-function: ease-out;
+  }
+  82% {
+    transform: translateX(-4px);
+    timing-function: ease-in;
+  }
+  91% {
+    transform: translateX(2px);
+    timing-function: ease-out;
+  }
+  96% {
+    transform: translateX(-2px);
+    timing-function: ease-in;
+  }
+  100% {
+    transform: translateX(0px);
+    timing-function: ease-in;
+  }
+}

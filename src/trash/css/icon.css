@@ -1,0 +1,61 @@
+.icon {
+  display: inline-block;
+  background-repeat: no-repeat;
+}
+.icon_email {
+  min-width: 22px;
+  min-height: 18px;
+  background-image: url("../img/icon-email.png");
+}
+.icon_phone {
+  min-width: 20px;
+  min-height: 23px;
+  background-image: url("../img/icon-phone.png");
+}
+.icon_placemark {
+  min-width: 20px;
+  min-height: 25px;
+  background-image: url("../img/icon-placemark.png");
+  background-size: cover;
+}
+.icon_user {
+  min-width: 19px;
+  min-height: 24px;
+  background-image: url("../img/icon-user.png");
+  background-size: cover;
+}
+.icon_arrow {
+  min-width: 12px;
+  min-height: 12px;
+  background-image: url("../img/icon-arrow.svg");
+  background-size: cover;
+}
+.icon_catalog {
+  min-width: 52px;
+  min-height: 32px;
+  background-image: url("../img/icon-catalog.png");
+}
+.icon_circle {
+  width: 5px;
+  height: 5px;
+  background-color: #0c3791;
+  border-radius: 50%;
+}
+.icon_plus:before {
+  content: '+';
+  width: 18px;
+  height: 19px;
+  color: #46a128;
+  font-size: 36px;
+  font-weight: 500;
+  font-style: normal;
+}
+.icon_minus:before {
+  content: '-';
+  width: 18px;
+  height: 19px;
+  color: #46a128;
+  font-size: 45px;
+  font-weight: 500;
+  font-style: normal;
+}

@@ -1,0 +1,42 @@
+.crumbs {
+  position: relative;
+  z-index 2
+  display: flex;
+  justify-content flex-start
+  align-items center
+  margin: 28px 0 18px 0
+  //width: 93%
+  //max-width 1110px
+
+  a {
+    text-decoration: none !important
+  }
+  
+  &__link {
+    color: #0c3690;
+    font-size: 15px;
+
+    &:hover {
+      color: #717171
+    }
+
+    &_current {
+      font-size: 15px;
+      pointer-events none
+      color: #717171;
+    }
+  }
+
+  &__icon {
+    display: inline-block;
+    margin: 0 18px
+  }
+}
+
+@media (max-width: 400px) {
+  .crumbs {
+    &__icon {
+      margin: 0 16px
+    }
+  }
+}

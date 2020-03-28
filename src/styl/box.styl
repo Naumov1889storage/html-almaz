@@ -1,0 +1,25 @@
+.box {
+  position: relative;
+
+  &__content {
+    position: relative;
+    z-index 2
+    box-shadow: 0 10px 24px rgba(37, 37, 37, 0.06);
+    border-radius: 5px;
+    background-color: #ffffff;
+  }
+
+  &:after {
+    content ''
+    position: absolute;
+    z-index 1
+    top: 20px
+    left 6px
+    right: 6px
+    bottom -6px
+
+    box-shadow: 0 10px 24px rgba(37, 37, 37, 0.06);
+    border-radius: 5px;
+    background-color: #fefefe;
+  }
+}

@@ -1,0 +1,151 @@
+.input-container {
+  height: 75px
+}
+
+.input {
+  position: relative;
+  z-index 1
+  width: 100%
+  height: 100%
+  padding: 0 32px 0 22px
+  border: 1px solid #d4d4d4;
+  border-radius: 5px
+  font-size: 16px
+
+  &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: $greyColor
+    opacity: 1; /* Firefox */
+  }
+
+  &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: $greyColor
+  }
+
+  &::-ms-input-placeholder { /* Microsoft Edge */
+    color: $greyColor
+  }
+
+  &:focus {
+    box-shadow: inset 0 0 12px rgba(24, 24, 24, 0.15)
+  }
+
+}
+
+@media (max-width: 400px) {
+  .input {
+    padding: 0 32px 0 22px
+    font-size: 17px
+  }
+}
+
+.input-container {
+  position: relative
+  display: inline-block
+
+  &__icon {
+    position: absolute
+    z-index 2
+    top: 50%
+    transform: translateY(-50%)
+    right: 25px
+  }
+
+  &__input {
+    padding-right: 62px
+  }
+}
+
+.checkbox {
+  padding-left: 28px
+  color: #5e5e5e
+  font-size: 14px
+  font-weight: 400
+
+  &__checkmark {
+    width: 18px
+    height: 18px
+    border-radius: 3px
+    background: #e8e8e8
+
+    &:after {
+      display: block
+      top: 4px
+      left: 8px
+      width: 3px
+      height: 7px
+      border-width: 0 1px 1px 0
+      transform: rotate(45deg) scale(0.7)
+      opacity: 0
+      transition: ease-in-out .1s
+    }
+  }
+
+  &__input:checked ~ .checkbox__checkmark {
+    background-color: #49a62a
+  }
+
+  & .checkbox__input:checked ~ .checkbox__checkmark {
+    background-color: #49a62a
+
+    &:after {
+      transform: rotate(45deg) scale(1)
+      opacity: 1
+    }
+  }
+}
+
+.checkbox.bounce {
+  box-shadow none
+  color: lighten(red, 30%)
+
+  a {
+    color: lighten(red, 30%)
+  }
+}
+
+.bounce.checkbox .checkbox__checkmark {
+  background-color: lighten(red, 30%);
+}
+
+.bounce {
+  outline: 0;
+  box-shadow: inset 0 0 12px lighten(red, 70%)
+  animation-name: bounce;
+  animation-duration: .5s;
+  animation-delay: 0.25s;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateX(0px);
+    timing-function: ease-in;
+  }
+  37% {
+    transform: translateX(5px);
+    timing-function: ease-out;
+  }
+  55% {
+    transform: translateX(-5px);
+    timing-function: ease-in;
+  }
+  73% {
+    transform: translateX(4px);
+    timing-function: ease-out;
+  }
+  82% {
+    transform: translateX(-4px);
+    timing-function: ease-in;
+  }
+  91% {
+    transform: translateX(2px);
+    timing-function: ease-out;
+  }
+  96% {
+    transform: translateX(-2px);
+    timing-function: ease-in;
+  }
+  100% {
+    transform: translateX(0px);
+    timing-function: ease-in;
+  }
+}

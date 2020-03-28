@@ -1,0 +1,151 @@
+extends pug-components/layout
+
+block append title
+    -page = 'Главная'
+
+block content
+    .index-page-slider-section
+        .index-page-slider
+            .container
+                .index-page-slider__control
+                    .index-page-slider__arrows
+                            button
+                                i.icon.icon_arrow
+                            button
+                                i.icon.icon_arrow
+                    .index-page-slider__dots
+
+            .index-page-slider__item-list
+                .index-page-slider__item
+                    .container
+                        .index-page-slider__item-content
+                            .index-page-slider__title Собственное производство
+                            .index-page-slider__text Мы предлагаем полный цикл полиграфического производства, начиная от дизайна изделия и заканчивая доставкой заказчику.
+                            a(href="" class="btn btn_1") подробнее
+                        img.index-page-slider__bg(src="img/bg-index-page-slider.png")
+                .index-page-slider__item
+                    .container
+                        .index-page-slider__item-content
+                            .index-page-slider__title Собственное производство
+                            .index-page-slider__text Мы предлагаем полный цикл полиграфического производства, начиная от дизайна изделия и заканчивая доставкой заказчику.
+                            a(href="" class="btn btn_1") подробнее
+                        img.index-page-slider__bg(src="img/bg-index-page-slider.png")
+                .index-page-slider__item
+                    .container
+                        .index-page-slider__item-content
+                            .index-page-slider__title Собственное производство
+                            .index-page-slider__text Мы предлагаем полный цикл полиграфического производства, начиная от дизайна изделия и заканчивая доставкой заказчику.
+                            a(href="" class="btn btn_1") подробнее
+                        img.index-page-slider__bg(src="img/bg-index-page-slider.png")
+
+
+
+
+
+    .feature-section
+        .container
+            .feature-list
+                .feature
+                    .feature__icon(style="min-width: 55px;min-height:55px;background-image:url(img/icon-feature-1.png)")
+                    .feature__text Быстрые сроки изготовления
+
+                .feature
+                    .feature__icon(style="min-width: 58px;min-height: 42px;background-image:url(img/icon-feature-2.png)")
+                    .feature__text Индивидуальный подход к клиенту
+
+                .feature
+                    .feature__icon(style="min-width: 55px;min-height:55px;background-image:url(img/icon-feature-3.png)")
+                    .feature__text Бесплатный дизайн
+
+                .feature
+                    .feature__icon(style="min-width: 53px;min-height: 53px;background-image:url(img/icon-feature-4.png)")
+                    .feature__text Всегда рады ответить на любые вопросы
+
+    .catalog-section#catalog
+        .container
+            h2.title.title_h2
+                .title__text Наша продукция
+                .title__divider
+
+            .product-list
+                .product.box
+                    .box__content
+                        img(class="product__img" src="img/picture-catalog-1.jpg")
+                        .product__text Самоклеющиеся этикетки
+                        a.product__btn.btn.btn_2(href="product.html") подробнее
+
+                .product.box
+                    .box__content
+                        img(class="product__img" src="img/picture-catalog-2.jpg")
+                        .product__text Термоэтикетка
+                        a.product__btn.btn.btn_2(href="product.html") Смотреть прайс
+
+                .product.box
+                    .box__content
+                        img(class="product__img" src="img/picture-catalog-3.jpg")
+                        .product__text Чековая лента
+                        a.product__btn.btn.btn_2(href="product.html") Смотреть прайс
+
+                .product.box
+                    .box__content
+                        img(class="product__img" src="img/picture-catalog-4.jpg")
+                        .product__text Термотрансферная лента (риббон)
+                        a.product__btn.btn.btn_2(href="product.html") подробнее
+
+                .product.box
+                    .box__content
+                        img(class="product__img" src="img/picture-catalog-5.jpg")
+                        .product__text Этикет-лента
+                        a.product__btn.btn.btn_2(href="product.html") Смотреть прайс
+
+                .product.box
+                    .box__content
+                        img(class="product__img" src="img/picture-catalog-6.jpg")
+                        .product__text Ценники-ролики
+                        a.product__btn.btn.btn_2(href="product.html") Смотреть прайс
+
+                .product.box
+                    .box__content
+                        img(class="product__img" src="img/picture-catalog-7.jpg")
+                        .product__text Ценники<br>картонные
+                        a.product__btn.btn.btn_2(href="product.html") Смотреть прайс
+
+                .product.box
+                    .box__content
+                        img(class="product__img" src="img/picture-catalog-8.jpg")
+                        .product__text Скотч с печатью<br>и без
+                        a.product__btn.btn.btn_2(href="product.html") Смотреть прайс
+
+                .product.box
+                    .box__content
+                        img(class="product__img" src="img/picture-catalog-9.jpg")
+                        .product__text Пленка<br>с печатью
+                        a.product__btn.btn.btn_2(href="product.html") Смотреть прайс
+
+                .product.box
+                    .box__content
+                        img(class="product__img" src="img/picture-catalog-10.jpg")
+                        .product__text Пакеты<br>с печатью
+                        a.product__btn.btn.btn_2(href="product.html") Смотреть прайс
+
+
+
+    .map-contact
+        #map-container.map-contact__map
+        .container.map-contact__container
+            .map-contact__box.box
+                .box__content
+                    h2.title.title_h2
+                        .title__text Наши контакты
+                        .title__divider.title__divider_left
+                    .footer__contact-list.contact-list
+                        a(class="contact" href="tel:(8442) 98-10-71 (72)")
+                            i.icon.icon_phone.contact__icon
+                            span.contact__text (8442) 98-10-71 (72)
+                        a(class="contact" href="mailto:info@almazplus.ru")
+                            i.icon.icon_email.contact__icon
+                            span.contact__text info@almazplus.ru
+                        a(class="contact")
+                            i.icon.icon_placemark.contact__icon
+                            span.contact__text г.Волгоград ул.Качуевской, 2Д
+

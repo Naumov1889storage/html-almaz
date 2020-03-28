@@ -1,0 +1,45 @@
+.vacancy {
+  margin: 0 0 70px 0
+
+  &:last-child {
+    margin: 0 0 100px 0
+  }
+  &__title-n-date {
+    display: flex;
+    align-items flex-end
+    margin-bottom 0.5rem
+  }
+
+  &__title {
+    color: #545454;
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+  &__date {
+    margin: 0 0 2px 26px
+    color: #1b4482;
+    font-size: 16px;
+  }
+
+  &__text {
+    font-size: 18px
+    line-height: 27px
+    color: #545454;
+  }
+
+  &__btn {
+    margin: 24px 0 0 0
+    width: max-content;
+    height: 60px;
+    padding: 0 42px 0 42px
+  }
+}
+
+@media (max-width: 600px) {
+  .vacancy {
+    &__btn {
+       padding: 0 20px 0 20px
+    }
+  }
+}

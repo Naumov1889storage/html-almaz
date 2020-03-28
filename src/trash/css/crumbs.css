@@ -1,0 +1,32 @@
+.crumbs {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 28px 0 18px 0;
+}
+.crumbs a {
+  text-decoration: none !important;
+}
+.crumbs__link {
+  color: #0c3690;
+  font-size: 15px;
+}
+.crumbs__link:hover {
+  color: #717171;
+}
+.crumbs__link_current {
+  font-size: 15px;
+  pointer-events: none;
+  color: #717171;
+}
+.crumbs__icon {
+  display: inline-block;
+  margin: 0 18px;
+}
+@media (max-width: 400px) {
+  .crumbs__icon {
+    margin: 0 16px;
+  }
+}

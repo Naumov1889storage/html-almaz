@@ -1,0 +1,67 @@
+extends pug-components/layout
+
+block append title
+    -page = 'Контакты'
+
+block content
+    .contact-page
+        .article
+            .container
+                .crumbs
+                    a(class="crumbs__link" href="index.html") Главная
+                    i.icon.icon_circle.crumbs__icon
+                    a(class="crumbs__link_current" href="") Контакты
+
+                .title.title_h2.text_left
+                    .title__text Контакты
+                    .title__divider.title__divider_left
+
+                .contact-list-of-lists
+                    .contact-list-of-lists__item
+                        h2.title.title_30.title_left
+                            .title__text г. Москва
+                            .title__divider.title__divider_left
+                        h3.title.title_h3.title_left
+                            .title__text Отдел продаж
+                        .footer__contact-list.contact-list
+                            div(class="contact")
+                                i.icon.icon_phone.contact__icon
+                                span.contact__text <a href="tel:8-903-317-44-46">8-903-317-44-46</a>
+                            a(class="contact" href="mailto:moscow@almazplus.ru")
+                                i.icon.icon_email.contact__icon
+                                span.contact__text moscow@almazplus.ru
+
+                    .contact-list-of-lists__item
+                        h2.title.title_30.title_left
+                            .title__text Ростовская обл., Астрахань и Краснодарский край
+                            .title__divider.title__divider_left
+                        h3.title.title_h3.title_left
+                            .title__text Отдел продаж
+                        .footer__contact-list.contact-list
+                            div(class="contact")
+                                i.icon.icon_phone.contact__icon
+                                span.contact__text <a href="tel:8-903-317-44-46">8-903-317-44-46</a>
+                            a(class="contact" href="mailto:moscow@almazplus.ru")
+                                i.icon.icon_email.contact__icon
+                                span.contact__text moscow@almazplus.ru
+
+            .map-contact
+                #map-container.map-contact__map
+                .container.map-contact__container
+                    .map-contact__box.box(style="max-width:396px")
+                        .box__content
+                            h2.title.title_h2
+                                .title__text г. Волгоград
+                                .title__divider.title__divider_left
+                            h3.title.title_h3
+                                .title__text Отдел продаж
+                            .footer__contact-list.contact-list
+                                div(class="contact")
+                                    i.icon.icon_phone.contact__icon
+                                    span.contact__text <a href="tel:(8442) 98-10-71 (72)">(8442) 98-10-71 (72)</a><br><a href="tel:8-906-175-06-08">8-906-175-06-08</a>
+                                a(class="contact" href="mailto:info@almazplus.ru")
+                                    i.icon.icon_email.contact__icon
+                                    span.contact__text info@almazplus.ru
+                                a(class="contact")
+                                    i.icon.icon_placemark.contact__icon
+                                    span.contact__text 400002 г.Волгоград<br>ул.Качуевской, 2Д

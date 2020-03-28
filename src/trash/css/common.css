@@ -1,0 +1,23 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #545454;
+}
+a {
+  color: inherit;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+}
+.container {
+  margin: 0 auto;
+  max-width: 1110px;
+  width: 93%;
+}

@@ -1,0 +1,116 @@
+table {
+  margin: 0 auto
+  min-width: 430px;
+  width: 100%
+  border-spacing: 0
+  border-collapse: collapse
+
+  tr {
+    height: 80px
+    background-color: #ffffff
+    border 1px solid #efefef
+    &:nth-child(2n+1) {
+      background-color: #f8f8f8;
+    }
+    &:first-child {
+      height: 73px
+      border-width: 0
+    }
+    &.table__header_small {
+      height: 60px
+      th[colspan] {
+        border-bottom: 1px solid #46a128
+      }
+    }
+  }
+
+  th {
+    background-color: #153f80
+    padding: 1px//5px
+
+    color: #ffffff
+    font-size: 20px
+    font-weight: 500
+  }
+
+  td {
+    padding: 1px//5px
+    text-align: center
+
+    color: #646464
+    font-size: 19px
+    font-weight: 400
+
+    &.price {
+      color: #46a128
+      font-weight: 700
+    }
+  }
+}
+
+
+
+.table {
+
+  &__title {
+    margin-bottom: 30px
+    color: #4a4a4a
+    font-size: 21px
+    font-weight: 700
+    line-height: 28px
+    text-transform: uppercase
+    text-align: center
+  }
+}
+
+@media (max-width: 700px) {
+  .table {
+    &__title {
+      margin-bottom: 25px
+      font-size: 19px
+    }
+  }
+  .table__wrap {
+    overflow: auto
+  }
+  table {
+    overflow: auto
+    tr {
+      height: 75px
+      &:first-child {
+        height: 68px
+      }
+    }
+    th {
+      font-size: 16px
+    }
+    td {
+      font-size: 15px
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .table {
+    margin: 0 -10px 0 -10px
+    &__title {
+      font-size: 17px
+      line-height: 25px
+      margin-bottom: 15px
+    }
+  }
+  table {
+    tr {
+      height: 56px//65px
+      &:first-child {
+        height: 58px
+      }
+    }
+    th {
+      font-size: 13px//14px
+    }
+    td {
+      font-size: 11px//13px
+    }
+  }
+}

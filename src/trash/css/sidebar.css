@@ -1,0 +1,90 @@
+.overlay {
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  right: 0;
+  bottom: -500px;
+  width: 100%;
+  background: rgba(0,0,0,0.35);
+  visibility: hidden;
+  transition: 0.4s;
+}
+.overlay_active {
+  visibility: visible;
+}
+.sidebar {
+  position: fixed;
+  z-index: 6;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  background: #fff;
+  transition: ease 0.4s;
+  overflow: hidden;
+}
+.sidebar {
+  overflow-y: auto;
+}
+.sidebar .nav {
+  flex-direction: column;
+  align-items: flex-end;
+  height: auto;
+}
+.sidebar .nav__item {
+  white-space: nowrap;
+  width: 100%;
+  justify-content: flex-end;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 400;
+}
+.sidebar .nav__item:last-child {
+  border-bottom: 0;
+}
+.sidebar .nav__item:not(.nav__drop) {
+  padding-right: 20px;
+  height: 50px;
+  background: #032e79;
+}
+.sidebar .nav__item.nav__drop .accordion__content {
+  border-right: 4px solid #46a128;
+  border-left: 4px solid #46a128;
+}
+.sidebar .nav__item.nav__drop .accordion__title .icon_arrow {
+  margin-right: 10px;
+  transform: scale(0.8);
+}
+.sidebar .nav__item.nav__drop .accordion__title_active .icon_arrow {
+  transform: scale(0.8) rotate(180deg);
+}
+.sidebar .nav__item.nav__drop > .drop__link {
+  padding: 0 20px 0 0;
+  width: 100%;
+  min-height: 50px;
+  height: 50px;
+  font-size: 18px !important;
+  font-weight: 400;
+}
+.sidebar .nav__item.nav__drop .drop__link {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 14px;
+  padding-right: 20px;
+  text-align: right;
+}
+.sidebar_active {
+  width: 200px;
+}
+.pusher {
+  overflow: hidden;
+  height: 100%;
+  margin-right: 0;
+  transition: 0.4s;
+  width: 100%;
+}
+.pusher_active {
+  transform: translate3d(-200px, 0, 0);
+}

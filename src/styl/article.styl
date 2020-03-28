@@ -1,0 +1,31 @@
+.article-mobile,
+.article-tablet {
+  display: none
+}
+
+@media (max-width: 900px) {
+  .article-desktop {
+    display: none
+  }
+
+  .article-tablet {
+    display: inline-block
+  }
+}
+
+@media (max-width: 600px) {
+  .article-tablet {
+    display: none
+  }
+
+  .article-mobile {
+    display: inline-block
+  }
+}
+
+.article {
+  color: #545454;
+  font-size: 18px;
+  line-height: 27px;
+}
+

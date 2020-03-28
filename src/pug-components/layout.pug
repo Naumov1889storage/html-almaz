@@ -1,0 +1,112 @@
+doctype html
+html(lang="ru-Ru")
+    head
+        meta(charset = 'utf-8')
+        meta(name='viewport', content="initial-scale=1.0, width=device-width")
+        block title
+            -let title = "АЛМАЗ"
+            -let page = ''
+        title #{title + (page.length ? " - " : "") + (typeof page === 'string' ? page : page[page.length - 1])}
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/tiny-slider.css")
+        link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap&subset=cyrillic")
+        link(rel="stylesheet" href="css/concat-css-libs.css")
+        link(rel="stylesheet" href="css/concat-css.css")
+    body
+        .sidebar
+            .nav
+                a(class="nav__item" href="index.html")
+                    | Главная
+                a(class="nav__item" href="about.html")
+                    | О компании
+                a(class="nav__item" href="vacancy.html")
+                    | Вакансии
+                a(class="nav__item" href="contact.html")
+                    | Контакты
+                a(class="nav__item js-sidebar-nav-item" data-popbox-target="popbox-callback")
+                    | Заказать звонок
+
+
+        .pusher
+
+            block header
+                header.header
+                    .container.header__container
+                        a(class="logo header__logo" href="index.html")
+                            img(class="logo__img" src="img/logo-almaz.png")
+                            span.logo__text АЛМАЗ
+                        .header__contact-list
+                            a(class="contact" href="mailto:info@almazplus.ru")
+                                i.icon.icon_email.contact__icon
+                                span.contact__text info@almazplus.ru
+                            a(class="contact" href="tel:(8442) 98-10-71 (72)")
+                                i.icon.icon_phone.contact__icon
+                                span.contact__text (8442) 98-10-71 (72)
+                        a.btn.btn_2.header__callback-btn(data-popbox-target="popbox-callback") Заказать звонок
+                        button.burger.header__burger
+                            i
+
+                .subheader
+                    .container.nav
+                        a(class="nav__item" href="index.html")
+                            | Главная
+                        a(class="nav__item" href="about.html")
+                            | О компании
+                        a(class="nav__item" href="vacancy.html")
+                            | Вакансии
+                        a(class="nav__item" href="contact.html")
+                            | Контакты
+
+
+
+
+            block content
+
+            block footer
+                footer.footer
+                    .container.footer__container
+                        a(class="logo footer__logo" href="index.html")
+                            img(class="logo__img" src="img/logo-almaz.png")
+                            span.logo__text АЛМАЗ
+
+                        .footer__policy-n-terms
+                            a(href="confidentiality.html") Политика конфиденциальности
+                            a(href="terms.html") Пользовательское соглашение
+
+                        .footer__author-n-copyright
+                            span.footer__author Разработка сайта <a href="https://rfim.ru/">rfim.ru</a>
+                            span.footer__copyright © Все права защищены. 2020
+
+
+
+        .overlay
+        .popbox(data-popbox-id="popbox-callback")
+            .popbox_container.popbox_container_narrow.box
+                i.icon.popbox__cross(data-popbox-close="popbox-callback" style="width:16px;height:16px;background-image: url(img/icon-cross.svg)")
+                .box__content
+                    h3.title.title_h3
+                        span.title__text Хотите заказать или есть другие вопросы?
+                        span.title__divider.title__divider_small
+                    .subtitle Оставьте свои контакты, наш менеджер свяжется с вами в течении 15 минут и ответит на ваши вопросы
+                    form(method="post")
+                        .input-container
+                            i.icon.icon_user.input-container__icon
+                            input(class="input input-container__input" required name="name" placeholder="Ваше имя")
+                        .input-container
+                            i.icon.icon_phone.input-container__icon
+                            input(class="input input-container__input" required name="phone" placeholder="Ваш телефон")
+                        button(type="submit" class="btn btn_1 faq-section__btn") заказать звонок
+                        label(class="checkbox")
+                            span.checkbox__text Даю согласие на обработку  моих <a class="text_color_primary" href="confidentiality.html">персональных данных</a>
+                            input(class="checkbox__input" checked type="checkbox")
+                            span.checkbox__checkmark
+
+        .popbox(data-popbox-id="popbox-success")
+            .popbox_container.popbox_container_narrow.box
+                .box__content
+                    i.icon.popbox__cross(data-popbox-close="popbox-success" style="width:16px;height:16px;background-image: url(img/icon-cross.svg)")
+                    h2.title_h2 <span class="text_color_primary">Спасибо, <br></span> ваша заявка отправлена
+
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js")
+        script(src="https://api-maps.yandex.ru/2.1/?apikey=c599d252-3a6f-4b64-872c-a529f6263f40&lang=ru_RU")
+        script(src="js/concat-js-libs.js")
+        script(src="js/common.js")

@@ -1,0 +1,122 @@
+.header {
+  background-color: #fff;
+  border-bottom: 1px solid #f3f3f3;
+}
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 21px 0;
+}
+.header__contact-list {
+  display: flex;
+}
+.header__contact-list .contact {
+  margin-right: 2rem;
+}
+.header__contact-list .contact:last-child {
+  margin: 0;
+}
+.header__callback-btn {
+  width: 203px;
+  height: 50px;
+}
+@media (max-width: 1250px) {
+  .header__contact-list {
+    flex-direction: column;
+  }
+  .header__contact-list .contact {
+    margin: 0 0 0.7rem 0;
+  }
+}
+@media (max-width: 1000px) {
+  .header__logo .logo__img {
+    margin-right: 14px;
+    width: 70px;
+  }
+  .header__logo .logo__text {
+    font-size: 24px;
+  }
+  .header__callback-btn {
+    width: 190px;
+    height: 52px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 550px) {
+  .header__logo {
+    flex-direction: column;
+  }
+  .header__logo .logo__img {
+    margin: 0 0 4px 0;
+    width: 76px;
+  }
+  .header__logo .logo__text {
+    font-size: 18px;
+  }
+}
+@media (max-width: 400px) {
+  .header__container {
+    padding: 14px 0;
+  }
+  .header__logo .logo__img {
+    margin: 0 0 4px 0;
+    width: 62px;
+  }
+  .header__logo .logo__text {
+    font-size: 16px;
+  }
+  .header__contact-list .contact {
+    font-size: 15px;
+  }
+  .header__contact-list .contact__icon {
+    margin: 6px 0 0 0;
+    transform: scale(0.7);
+  }
+}
+.subheader {
+  height: 54px;
+  background-color: #fff;
+  box-shadow: 0 4px 16px rgba(45,45,45,0.04);
+}
+.nav {
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+}
+.nav__item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #545454;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+}
+.nav__item:hover {
+  color: #032e79;
+}
+.nav__item:hover:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #032e79;
+}
+.burger {
+  display: none;
+}
+@media (max-width: 760px) {
+  .burger {
+    display: block;
+  }
+  .header__callback-btn {
+    display: none;
+  }
+  .subheader {
+    display: none;
+  }
+}
