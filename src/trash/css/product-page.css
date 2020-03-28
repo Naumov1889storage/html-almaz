@@ -47,42 +47,20 @@
   left: 560px;
   height: 100%;
   object-fit: cover;
+  object-position: left;
 }
 .product-page .gallery {
   margin: -15px;
 }
-@media (max-width: 1100px) {
+@media (max-width: 900px) {
   .product-header {
     position: relative;
     padding: 20px 0;
-    min-height: 250px;
+    min-height: 200px;
     height: auto;
   }
-  .product-header:before {
-    content: "";
-    position: absolute;
-    z-index: 2;
-    width: 100%;
-    max-width: 985px;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(255,255,255,0.9)), color-stop(62%, rgba(255,255,255,0.7)), to(rgba(255,255,255,0)));
-    background-image: -webkit-linear-gradient(left, rgba(255,255,255,0.9), rgba(255,255,255,0.7) 62%, rgba(255,255,255,0));
-    background-image: -o-linear-gradient(left, rgba(255,255,255,0.9) 0, rgba(255,255,255,0.7) 62%, rgba(255,255,255,0) 100%);
-    background-image: linear-gradient(90deg, rgba(255,255,255,0.9) 0, rgba(255,255,255,0.7) 62%, rgba(255,255,255,0));
-  }
-  .product-header__text {
-    position: relative;
-    z-index: 3;
-  }
-  .product-header__container {
-    position: static;
-  }
   .product-header__bg {
-    width: 100%;
-    left: 50%;
-    transform: translateX(-50%);
+    display: none;
   }
 }
 @media (max-width: 1000px) {
@@ -97,13 +75,13 @@
 @media (max-width: 700px) {
   .product-form {
     flex-direction: column;
+    align-items: center;
   }
   .product-form .input-container {
     margin: 0 0 1rem 0;
   }
-}
-@media (max-width: 600px) {
-  .product-header {
-    min-height: 200px;
+  .product-form-title {
+    display: block;
+    text-align: center;
   }
 }

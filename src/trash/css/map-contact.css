@@ -52,7 +52,7 @@
 }
 @media (max-width: 500px) {
   .map-contact {
-    height: 350px;
+    height: 450px;
   }
   .map-contact__box .box__content {
     padding: 1.2rem;

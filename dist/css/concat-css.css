@@ -7,15 +7,72 @@
 }
 
 @media (max-width: 800px) {
-  .about-page .gallery {
-    -webkit-flex-wrap: nowrap;
-        -ms-flex-wrap: nowrap;
-            flex-wrap: nowrap;
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    overflow-x: scroll;
+  .about-page .gallery-slider__item {
+    padding: 10px 0 30px 0;
+  }
+
+  .about-page .gallery-slider__item .box {
+    margin: 0 auto;
+  }
+
+  .about-page .tns-nav {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+
+  .about-page .tns-nav button {
+    margin: 6px;
+    width: 11px;
+    height: 11px;
+    background-color: #eee;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+  }
+
+  .about-page .tns-nav button.tns-nav-active,
+  .about-page .tns-nav button.tns-nav-active:hover {
+    background-color: #032e79;
+  }
+
+  .about-page .tns-nav button:hover {
+    background-color: #d6d6d6;
+  }
+}
+
+@media (max-width: 800px) {
+  .about-page .gallery-slider__item .box {
+    min-width: auto;
+  }
+
+  .about-page .gallery-slider__item .box__content {
+    padding: 15px;
+  }
+
+  .about-page .gallery-slider__item .box img {
+    -o-object-fit: contain;
+       object-fit: contain;
+    height: 100%;
+  }
+}
+
+@media (max-width: 740px) {
+  .about-page .gallery-slider__item .box {
+    height: 86px;
+  }
+}
+
+@media (max-width: 360px) {
+  .about-page .gallery-slider__item .box {
+    height: 80px;
   }
 }
 .article-mobile,
@@ -633,7 +690,14 @@ a {
 }
 
 .gallery > img {
-  margin: 15px 15px 15px 15px;
+  margin: 15px;
+}
+
+@media (max-width: 400px) {
+  .gallery > img {
+    margin: 10px;
+    width: 38%;
+  }
 }
 .header {
   background-color: #fff;
@@ -1244,7 +1308,7 @@ a {
 
 @media (max-width: 500px) {
   .map-contact {
-    height: 350px;
+    height: 450px;
   }
 
   .map-contact__box .box__content {
@@ -1408,53 +1472,24 @@ a {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: left;
+     object-position: left;
 }
 
 .product-page .gallery {
   margin: -15px;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 900px) {
   .product-header {
     position: relative;
     padding: 20px 0;
-    min-height: 250px;
+    min-height: 200px;
     height: auto;
   }
 
-  .product-header:before {
-    content: "";
-    position: absolute;
-    z-index: 2;
-    width: 100%;
-    max-width: 985px;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(255,255,255,0.9)), color-stop(62%, rgba(255,255,255,0.7)), to(rgba(255,255,255,0)));
-    background-image: -webkit-linear-gradient(left, rgba(255,255,255,0.9), rgba(255,255,255,0.7) 62%, rgba(255,255,255,0));
-    background-image: -o-linear-gradient(left, rgba(255,255,255,0.9) 0, rgba(255,255,255,0.7) 62%, rgba(255,255,255,0) 100%);
-    background-image: -webkit-gradient(linear, left top, right top, color-stop(0, rgba(255,255,255,0.9)), color-stop(62%, rgba(255,255,255,0.7)), to(rgba(255,255,255,0)));
-    background-image: -webkit-linear-gradient(left, rgba(255,255,255,0.9) 0, rgba(255,255,255,0.7) 62%, rgba(255,255,255,0));
-    background-image: -o-linear-gradient(left, rgba(255,255,255,0.9) 0, rgba(255,255,255,0.7) 62%, rgba(255,255,255,0));
-    background-image: linear-gradient(90deg, rgba(255,255,255,0.9) 0, rgba(255,255,255,0.7) 62%, rgba(255,255,255,0));
-  }
-
-  .product-header__text {
-    position: relative;
-    z-index: 3;
-  }
-
-  .product-header__container {
-    position: static;
-  }
-
   .product-header__bg {
-    width: 100%;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-            transform: translateX(-50%);
+    display: none;
   }
 }
 
@@ -1476,16 +1511,19 @@ a {
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 
   .product-form .input-container {
     margin: 0 0 1rem 0;
   }
-}
 
-@media (max-width: 600px) {
-  .product-header {
-    min-height: 200px;
+  .product-form-title {
+    display: block;
+    text-align: center;
   }
 }
 .overlay {
